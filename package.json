@@ -1,0 +1,13 @@
+{
+  "name": "html-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:11ty": "eleventy --serve",
+    "build:11ty": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  }
+}
