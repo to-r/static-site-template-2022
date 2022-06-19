@@ -12,7 +12,9 @@
     "build": "run-s build:css build:11ty",
     "start": "run-p start:*",
     "format": "prettier --write .",
+    "lint": "run-p lint:*",
     "lint:js": "eslint src/**/*.js --fix",
+    "lint:css": "stylelint src/**/*.scss --fix",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -33,12 +35,19 @@
     "postcss-preset-env": "^7.7.1",
     "postcss-scss": "^4.0.4",
     "prettier": "2.7.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-scss": "^6.0.0",
+    "stylelint-scss": "^4.2.0"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
     "src/**/*.js": [
       "eslint --fix"
+    ],
+    "src/**/*.scss": [
+      "stylelint --fix"
     ]
   }
 }

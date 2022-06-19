@@ -2,7 +2,7 @@
   "editor.formatOnSave": true,
   "eslint.packageManager": "yarn",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.rulers": [80],
@@ -13,5 +13,7 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
-  "npm.packageManager": "yarn"
+  "npm.packageManager": "yarn",
+  "scss.validate": false,
+  "stylelint.validate": ["scss"]
 }
