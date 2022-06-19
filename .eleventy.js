@@ -7,7 +7,13 @@ module.exports = (config) => {
   // watch
   config.addWatchTarget("./src/assets/scss/");
 
+  // nunjucks settings
+  config.setNunjucksEnvironmentOptions({
+    throwOnUndefined: true,
+    autoescape: false, // warning: don’t do this!
+  });
+
   return {
-    dir: { input: 'src', output: 'site', includes: 'includes' }
+    dir: { input: 'src', output: 'site', includes: '_includes' }
   }
 }
