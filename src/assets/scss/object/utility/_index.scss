@@ -1,0 +1,15 @@
+// 右揃え
+.u-alignRight {
+  text-align: right;
+}
+
+// 中央揃え
+.u-alignCenter {
+  text-align: center;
+}
+
+@for $i from 1 through 100 {
+  .u-w#{$i} {
+    width: #{$i} + '%';
+  }
+}
