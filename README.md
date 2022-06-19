@@ -1,1 +1,1 @@
-# Static Site Template
+# Static Site Template 2022
