@@ -1,7 +1,8 @@
+/* eslint-disable no-proto */
 const listenersMap = [];
 
-const obj = {},
-  objProto = obj.__proto__;
+const obj = {};
+const objProto = obj.__proto__;
 
 /**
  * EventEmitter
