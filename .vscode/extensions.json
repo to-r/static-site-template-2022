@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "ronnidc.nunjucks",
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker",
+    "github.vscode-pull-request-github",
+    "ms-vsliveshare.vsliveshare",
+    "mosapride.zenkaku",
+    "wayou.vscode-todo-highlight"
+  ],
+  "unwantedRecommendations": []
+}

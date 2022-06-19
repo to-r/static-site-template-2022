@@ -170,4 +170,6 @@ dist
 # Built Visual Studio Code Extensions
 *.vsix
 
-_site
+site
+src/assets/css
+.envrc
