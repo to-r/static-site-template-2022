@@ -10,6 +10,6 @@
 
 @for $i from 1 through 100 {
   .u-w#{$i} {
-    width: #{$i} + '%';
+    width: #{$i} + "%";
   }
 }

@@ -1,5 +1,5 @@
-import { EventEmitter } from "./libs/utils/EventEmitter.js"
+import { EventEmitter } from "./libs/utils/EventEmitter.js";
 
-const ev = new EventEmitter()
+const ev = new EventEmitter();
 
-console.log('common.js!', ev)
+console.log("common.js!", ev);
