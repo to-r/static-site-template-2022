@@ -5,10 +5,12 @@
   "license": "MIT",
   "scripts": {
     "start:11ty": "eleventy --serve",
+    "start:css": "postcss src/assets/scss/**/[^_]*.scss --dir src/assets/css --ext css --watch",
     "build:11ty": "eleventy",
-    "build:scss": "postcss src/assets/scss/**/[^_]*.scss --dir src/assets/css --ext css",
+    "build:css": "postcss src/assets/scss/**/[^_]*.scss --dir src/assets/css --ext css",
     "prebuild": "rimraf site src/assets/css",
-    "build": "run-p build:*"
+    "build": "run-s build:css build:11ty",
+    "start": "run-p start:*"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
