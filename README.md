@@ -1,5 +1,12 @@
 # Static Site Template 2022
 
+## Command
+
+```sh
+yarn install
+yarn start
+```
+
 ## HTML
 
 - [Eleventy, a simpler static site generator](https://www.11ty.dev/docs/)
