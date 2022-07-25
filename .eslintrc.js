@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["standard", "prettier"],
+  extends: ["prettier"],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",

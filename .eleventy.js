@@ -4,11 +4,7 @@ const inject_svg = require("./libs/inject_svg");
 module.exports = (config) => {
   // Pass-through files
   config.addPassthroughCopy("src/assets/img/");
-  config.addPassthroughCopy("src/assets/css/");
-  config.addPassthroughCopy("src/assets/js/");
-
-  // watch
-  config.addWatchTarget("./src/assets/scss/");
+  config.addPassthroughCopy("src/assets/vendor/");
 
   // nunjucks settings
   config.setNunjucksEnvironmentOptions({

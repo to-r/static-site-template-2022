@@ -4,49 +4,31 @@
   "license": "MIT",
   "scripts": {
     "start:11ty": "eleventy --serve",
-    "start:css": "postcss src/assets/scss/**/[^_]*.scss --dir src/assets/css --ext css --watch",
+    "start:vite": "vite",
     "build:11ty": "eleventy",
-    "build:css": "postcss src/assets/scss/**/[^_]*.scss --dir src/assets/css --ext css",
-    "prebuild": "rimraf site src/assets/css",
-    "build": "run-s build:css build:11ty",
-    "start": "run-p start:*",
+    "build:vite": "vite build",
+    "prebuild": "rimraf site",
+    "build": "env-cmd -e production run-s build:vite build:11ty",
+    "start": "env-cmd -e development run-p start:*",
     "format": "prettier --write .",
     "lint": "run-p lint:*",
     "lint:js": "eslint src/**/*.js --fix",
-    "lint:css": "stylelint src/**/*.scss --fix",
-    "prepare": "husky install"
+    "lint:css": "stylelint src/**/*.scss --fix"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
-    "@csstools/postcss-sass": "^5.0.1",
+    "autoprefixer": "^10.4.7",
+    "env-cmd": "^10.1.0",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.2",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.14",
-    "postcss-cli": "^9.1.0",
-    "postcss-csso": "^6.0.0",
-    "postcss-preset-env": "^7.7.1",
-    "postcss-scss": "^4.0.4",
     "prettier": "2.7.1",
     "rimraf": "^3.0.2",
+    "sass": "^1.54.0",
     "stylelint": "^14.9.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended-scss": "^6.0.0",
-    "stylelint-scss": "^4.2.0"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown",
-    "src/**/*.js": [
-      "eslint --fix"
-    ],
-    "src/**/*.scss": [
-      "stylelint --fix"
-    ]
+    "stylelint-scss": "^4.2.0",
+    "vite": "^3.0.2"
   }
 }

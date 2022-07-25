@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
+  {% if build.env === "production" %}
   <link rel="stylesheet" href="/assets/css/main.css">
+  {% endif %}
 </head>
 <body>
   {{ content }}
-  {% include "js-modules.njk" %}
+  {% if build.env === "production" %}
   <script type="module" src="/assets/js/main.js"></script>
+  {% else %}
+  <script type="module" src="http://localhost:3000/src/assets/js/main.js"></script>
+  {% endif %}
 </body>
 </html>
