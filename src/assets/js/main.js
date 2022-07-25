@@ -1,5 +1,5 @@
-import { EventEmitter } from "./libs/utils/EventEmitter.js";
+import "../scss/main.scss";
 
-const ev = new EventEmitter();
-
-console.log("common.js!", ev);
+window.addEventListener("DOMContentLoaded", () => {
+  console.log("main.js!");
+});
